@@ -18,7 +18,7 @@ jobs:
          uses: actions/checkout@master
        
        - name: Clone Dumper Source Code
-         run: git clone https://github.com/DroidDumps/phoenix_firmware_dumper dumper
+         run: git clone https://github.com/MinatiScape/phoenix_firmware_dumper dumper
        
        - name: Setting up Dumper requirements
          run: |
