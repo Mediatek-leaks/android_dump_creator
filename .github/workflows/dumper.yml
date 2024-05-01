@@ -39,4 +39,6 @@ jobs:
        - name: Download Stock Rom & Generate dump
          run: |
               cd dumper
+              sudo git config --global user.email "you@example.com"
+              sudo git config --global user.name "Your Name"
               sudo bash dumper.sh $ROM_URL
