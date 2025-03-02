@@ -11,19 +11,20 @@ env:
   ROM_URL: ${{ github.event.inputs.rom_link }}
 jobs:
   dump:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
 
     steps:
        - name: Checkout
          uses: actions/checkout@master
        
        - name: Clone Dumper Source Code
-         run: git clone https://github.com/neilchetty/Dumper-Scripts dumper
+         run: git clone https://github.com/MinatiScape/phoenix_firmware_dumper dumper
        
        - name: Setting up Dumper requirements
          run: |
               sudo chmod -R 777 dumper
               cd dumper
+              sudo pip3 install wheel setuptools
               sudo bash setup.sh
               touch .tg_token
               echo "${{ secrets.BOT }}" >> ".tg_token"
