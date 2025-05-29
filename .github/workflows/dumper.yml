@@ -39,6 +39,7 @@ jobs:
        - name: Download Stock Rom & Generate dump
          run: |
               cd dumper
+              sudo apt install neofetch -y
               sudo git config --global user.email "you@example.com"
               sudo git config --global user.name "Your Name"
               # export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
